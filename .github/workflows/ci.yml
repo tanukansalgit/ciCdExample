@@ -26,6 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    - name: Start Docker for Mongodb
+      run: docker run -d -p 27017:27017 mongo
+    - name: Creating ENV file
+      run: cat example.env >> .env
     - run: npm install
     - run: npm run start
