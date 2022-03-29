@@ -30,5 +30,7 @@ jobs:
       run: docker run -d -p 27017:27017 mongo
     - name: Creating ENV file
       run: cat example.env >> .env
+      env:
+        MONGO_URL : mongodb://mongo:27017/registry
     - run: npm install
     - run: npm run start
