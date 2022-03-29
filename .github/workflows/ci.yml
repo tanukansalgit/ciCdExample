@@ -34,5 +34,3 @@ jobs:
         MONGO_URL : mongodb://mongo:27017/registry
     - run: npm install
     - run: npm run start
-
-          MONGO_URL : mongodb://mongo:27017/registry
