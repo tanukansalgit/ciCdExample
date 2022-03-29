@@ -32,3 +32,5 @@ jobs:
       run: cat example.env >> .env
     - run: npm install
     - run: npm run start
+      env:
+          MONGO_URL : mongodb://mongo:27017/registry
